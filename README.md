@@ -162,6 +162,6 @@ This project therefore focuses on creating a realistic prediction pipeline while
 
 **Varsha A**
 
-Machine Learning / Data Science Project
+AI & ML Graduate | Junior Data Scientist & Machine Learning Engineer | Python | SQL | Excel | Power BI | Prompt Engineer | Front-End Developer
 
 ---
