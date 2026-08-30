@@ -40,20 +40,6 @@ Because the dataset is imbalanced, accuracy alone is not sufficient to evaluate 
 
 ---
 
-## Dataset Features
-
-The original dataset contains information related to:
-
-* Orders
-* Products
-* Customers
-* Shipping
-* Payments
-* Returns
-* Environmental impact
-* Profit and return costs
-
-The prediction model intentionally avoids variables that would only become available **after a product has already been returned**.
 
 ### Features Used for Prediction
 
@@ -73,63 +59,6 @@ Is_Weekend
 ```
 
 Date-related features are extracted from `Order_Date`.
-
-### Features Excluded
-
-Identifiers such as:
-
-```text
-Order_ID
-Product_ID
-User_ID
-```
-
-are excluded because they do not provide meaningful generalizable predictive information.
-
-Post-return features such as:
-
-```text
-Return_Reason
-Days_to_Return
-Return_Cost
-Profit_Loss
-```
-
-are also excluded because using them would introduce **data leakage**.
-
-These variables contain information that would not be known at the time the model is expected to make a prediction.
-
----
-
-## Data Preprocessing
-
-The preprocessing workflow includes:
-
-### Date Feature Engineering
-
-`Order_Date` is converted into useful numerical features such as:
-
-```text
-Order_Month
-Order_DayOfWeek
-Is_Weekend
-```
-
-### Numerical Features
-
-Numerical features are processed using:
-
-* Median imputation
-* Standard scaling
-
-### Categorical Features
-
-Categorical variables are processed using:
-
-* Most-frequent value imputation
-* One-hot encoding
-
-`OneHotEncoder(handle_unknown="ignore")` is used so that previously unseen categories do not cause prediction errors.
 
 ---
 
