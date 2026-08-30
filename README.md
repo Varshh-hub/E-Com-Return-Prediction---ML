@@ -62,26 +62,6 @@ Date-related features are extracted from `Order_Date`.
 
 ---
 
-## Train-Test Split
-
-The dataset is divided into:
-
-```text
-80% Training Data
-20% Testing Data
-```
-
-The split uses:
-
-```python
-random_state=42
-stratify=y
-```
-
-Stratification ensures that the proportion of returned and non-returned orders remains similar in both datasets.
-
----
-
 ## Machine Learning Models
 
 Two classification algorithms were initially tested.
